@@ -1,5 +1,7 @@
 package com.taowy;
 
+import thread.src.com.taowy.MyThread;
+
 import java.util.concurrent.*;
 
 /**
@@ -11,7 +13,7 @@ import java.util.concurrent.*;
  */
 public class Demo {
     public static void main(String[] args) {
-        //final ExecutorService service = Executors.newFixedThreadPool(5);
+        //final ExecutorService service = Executors.newFixedThreadPool(5); 这种创建线程池是阿里不推荐的
         //创建线程池
         final ExecutorService service = new ThreadPoolExecutor(5,
                 5, 0L, TimeUnit.MILLISECONDS,new LinkedBlockingDeque<>(1024));
@@ -28,7 +30,8 @@ public class Demo {
                 System.out.println("执行完毕，线程池的名字为------>"+Thread.currentThread().getName());
             }
         });
-        /*service.submit(myThread);
+       /* //多线程创建后运行
+        service.submit(myThread);
         System.out.println();*/
     }
 }

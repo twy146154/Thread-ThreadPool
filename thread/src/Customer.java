@@ -1,3 +1,7 @@
+package thread.src;
+
+import thread.src.ThreadClass;
+
 /**
  * @author taowy
  * @time 2020/6/1 10:33

@@ -1,3 +1,5 @@
+package thread.src;
+
 import sun.applet.Main;
 
 /**

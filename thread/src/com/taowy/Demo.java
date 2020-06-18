@@ -16,7 +16,7 @@ public class Demo {
         //final ExecutorService service = Executors.newFixedThreadPool(5); 这种创建线程池是阿里不推荐的
         //创建线程池
         final ExecutorService service = new ThreadPoolExecutor(5,
-                5, 0L, TimeUnit.MILLISECONDS,new LinkedBlockingDeque<>(1024));
+                5, 0L, TimeUnit.MILLISECONDS,new LinkedBlockingDeque<>());
         MyThread myThread = new MyThread();
         service.execute(new Runnable() {
             @Override
